@@ -1,9 +1,9 @@
 def guess_digit():
     max_num = int(input('Enter the maximum number: '))
     min_num = int(input('Enter the minimum number: '))
-    guess = (max_num + min_num) // 2
 
     while True:
+        guess = (max_num + min_num) // 2
         print(f'Is the digit more, less, or equal to {guess}? (M/L/E)')
         ans = input().upper()
 
@@ -18,10 +18,6 @@ def guess_digit():
             print('Invalid input. Please enter M, L, or E.')
             continue
 
-        guess = (max_num + min_num) // 2
-
         if max_num - min_num <= 1:
-            print(f'Congratulations! You guessed the digit correctly. The digit is: {guess}')
+            print(f'The digit is: {guess}')
             break
-
-guess_digit()
